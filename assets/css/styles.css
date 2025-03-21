@@ -1,0 +1,31 @@
+/* CSS Navegación*/
+#nav{
+    border-style:groove;
+    border-color: #000000;
+    border-width: 1px;
+    border-radius: 8px;
+    width: 35%;
+    margin: 0 auto;
+    }
+
+nav ul{
+    list-style-type: none;
+    text-align: center;    
+    margin: 10px;
+    padding: 0;
+    }
+
+nav li{
+    display: inline;
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+}
+
+nav a:hover{
+    opacity: 1;
+}
