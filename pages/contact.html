@@ -28,7 +28,44 @@
         </ul>
       </nav>
     </header>
-    <main id="main"></main>
+    <main id="main">
+      <div class="main-container">
+        <div class="form-contenedor">
+            <form class="contact-formulario">
+                <label for="nombre">NOMBRE</label>
+                <input type="text" id="nombre" name="nombre" required>
+    
+                <label for="motivo">MOTIVO</label>
+                <input type="text" id="motivo" name="motivo">
+    
+                <label for="correo">CORREO</label>
+                <input type="email" id="correo" name="correo" required>
+    
+                <label for="mensaje">MENSAJE</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+    
+                <button type="submit">ENVIAR</button>
+            </form>
+        </div>
+    
+        <div class="video-placeholder-contenedor">
+            <div class="video-reproductor">
+                <div class="play-button-area">
+                     <svg class="icono-play" viewBox="0 0 100 100" fill="currentColor">
+                        <circle cx="50" cy="50" r="48" stroke="#D9534F" stroke-width="4" fill="none"/>
+                        <polygon points="40,30 70,50 40,70" fill="#D9534F"/>
+                    </svg>
+                </div>
+                <div class="control-barra">
+                    <div class="contenedor-progreso">
+                        <div class="progreso-f"></div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    
+    </div>
+    </main>
     <footer id="footer">
       <div>
         <p>©2025 - Juan David Caicedo Aponte</p>
