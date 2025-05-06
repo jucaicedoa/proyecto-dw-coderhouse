@@ -20,6 +20,7 @@ footer{
     display: flex;
     border-top: #000000 1px solid; 
  }
+
 /* CSS Navegación*/
 #nav{
     border-style:groove;
@@ -50,6 +51,44 @@ nav a {
 
 nav a:hover{
     opacity: 1;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #nav {
+        width: 90%;
+        text-align: left;
+        padding-bottom: 5px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
 }
 
 
@@ -290,8 +329,8 @@ img.linkedin{
     width: 100%;
     max-width: 900px; 
     align-items: start; 
+    padding: 10px;
 }
-
 
 .form-contenedor {
     border: 1px solid #000; 
