@@ -594,7 +594,8 @@ h1:hover {
   white-space: nowrap;
   overflow: hidden;
   transform: translateY(-50%);
-  animation: escritura-palabras 5s steps(50) 1s 1 normal both, parpadeo 500ms steps(50) infinite normal;
+  animation: escritura-palabras 5s steps(50) 1s 1 normal both,
+    parpadeo 500ms steps(50) infinite normal;
 }
 
 @keyframes escritura-palabras {
@@ -617,14 +618,14 @@ h1:hover {
 
 /* Css Skills*/
 .contenedor-main-skills {
-  width: 95vw;
-  height: 85vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10px;
 }
+
 .container-skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -632,13 +633,9 @@ h1:hover {
 }
 
 .section-skills {
-  border: 2px solid black;
+  border: 2px solid #45a29e;
   padding: 1rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px #66fcf1;
 }
 
 .skill {
@@ -646,28 +643,71 @@ h2 {
 }
 
 .label {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: #fff;
   margin-bottom: 0.3rem;
 }
 
+.label:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
 .container-progress {
   display: flex;
   align-items: center;
-  border: 2px solid black;
   height: 24px;
 }
 
 .barra-progreso {
   height: 100%;
-  background-color: black;
+  background-color: #c5c6c7;
+  border-radius: 5px;
   width: 80%;
+}
+
+.barra-progreso:hover {
+  background-color: #66fcf1;
+  transition: background-color 0.3s ease;
 }
 
 .porcentaje {
   margin-left: auto;
   padding: 0 0.5rem;
-  background: white;
+  background: transparent;
+  color: #fff;
 }
+
+.skills-text span {
+  color: #fff;
+  display: inline-block;
+  font-size: 3rem;
+  animation: movi 2s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+.skills-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+.skills-text span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skills-text span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.skills-text span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes movi {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
 
 /* CSS Contact */
 .main-container {
