@@ -488,8 +488,7 @@ h1:hover {
 
 /* Media Query abstract */
 @media (max-width: 768px) {
-
-  header{
+  header {
     margin-bottom: 10px;
   }
   .principal-abstract {
@@ -515,7 +514,6 @@ h1:hover {
 }
 
 @media (min-width: 769px) and (max-width: 1423px) {
-
   .principal-abstract {
     padding: 10px 15px;
     margin-bottom: 10px;
@@ -544,6 +542,8 @@ h1:hover {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .educacion-item {
@@ -551,38 +551,68 @@ h1:hover {
   padding: 1rem 1.5rem;
   border-radius: 5px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.fecha:hover {
-  transform: translate(0, -2px);
-  transition: transform 0.3s ease;
-}
-
-.educacion-item p {
-  margin: 0.4em 0;
-  line-height: 1.4;
-  color: #000;
-}
-
-.educacion-item .fecha {
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 0.6em;
+  box-shadow: 0 2px 4px rgba(194, 191, 191, 0.93);
 }
 
 .educacion-item .titulo {
   font-size: 1.1em;
   color: #000;
+  position: relative;
+  overflow: hidden;
+  animation: mover-palabras 6s linear;
+  margin: 0;
+}
+
+@keyframes mover-palabras {
+  0% {
+    left: 9%;
+  }
+  100% {
+    left: -8%;
+  }
+}
+
+.educacion-item .fecha {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.2em;
+}
+.fecha:hover {
+  transform: translate(0, -2px);
+  transition: transform 0.3s ease;
 }
 
 .educacion-item .nivel {
   font-style: italic;
-  color: #666;
+  color: #555;
 }
 
-.educacion-item .institucion {
-  color: #444;
+.institucion {
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  animation: escritura-palabras 5s steps(50) 1s 1 normal both, parpadeo 500ms steps(50) infinite normal;
+}
+
+@keyframes escritura-palabras {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes parpadeo {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 /* Css Skills*/
