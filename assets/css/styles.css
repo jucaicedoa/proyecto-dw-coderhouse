@@ -15,6 +15,7 @@ main {
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-direction: column;
   flex: 1;
 }
 footer {
@@ -82,7 +83,6 @@ nav a:hover {
 }
 /*Media queries nav*/
 @media screen and (max-width: 768px) {
-
   #nav {
     width: 95vw;
     text-align: left;
@@ -389,33 +389,112 @@ h1:hover {
 
 /* CSS Abstract */
 .principal-abstract {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 90%;
+  height: auto;
   padding: 40px 20px;
   box-sizing: border-box;
-  background-color: #f9f9f9;
-  color: #333;
-  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgba(237, 240, 255, 1) 23%,
+    rgba(215, 219, 224, 1) 66%
+  );
+  margin-bottom: 25px;
+  color: #000;
   line-height: 1.6;
+  border-radius: 10px;
 }
 
 .principal-abstract h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
-  text-align: center;
-  color: #111;
+  text-align: left;
 }
 
 .principal-abstract p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-align: justify;
+}
+
+.principal-abstract:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 3px #c5c6c7;
+}
+
+#container {
+  color: #c5c6c7;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: bold;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#transicion {
+  height: 50px;
+  overflow: hidden;
+}
+
+#transicion > div > div {
+  color: #0b0c10;
+  padding: 4px 12px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#transicion div:first-child {
+  animation: mostrar 5s linear infinite;
+}
+
+#transicion div div {
+  background: #66fcf1;
+}
+#transicion div:first-child div {
+  background: #45a29e;
+}
+#transicion div:last-child div {
+  background: #fff;
+}
+
+@keyframes mostrar {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
 }
 
 /* Media Query abstract */
 @media (max-width: 768px) {
+
+  header{
+    margin-bottom: 10px;
+  }
   .principal-abstract {
     padding: 30px 15px;
+    margin-bottom: 5px;
   }
 
   .principal-abstract h2 {
@@ -424,6 +503,38 @@ h1:hover {
 
   .principal-abstract p {
     font-size: 1rem;
+  }
+
+  #transicion > div > div {
+    color: #0b0c10;
+    padding: 2px 6px;
+    height: 20px;
+    display: inline-block;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1423px) {
+
+  .principal-abstract {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+  }
+
+  .principal-abstract h2 {
+    font-size: 1.7rem;
+  }
+
+  .principal-abstract p {
+    font-size: 1.2rem;
+  }
+
+  #transicion > div > div {
+    color: #0b0c10;
+    padding: 2px 6px;
+    height: 30px;
+    display: inline-block;
+    font-size: 20px;
   }
 }
 
@@ -441,6 +552,11 @@ h1:hover {
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.fecha:hover {
+  transform: translate(0, -2px);
+  transition: transform 0.3s ease;
 }
 
 .educacion-item p {
