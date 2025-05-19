@@ -3,18 +3,22 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #0b0c10;
-  background: linear-gradient(
-    90deg,
-    rgba(11, 12, 16, 1) 0%,
-    rgba(31, 40, 51, 1) 60%
-  );
+  background: $color-1;
+  background: $background-color;
 }
 
 main {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+  @include flex-colum;
   flex: 1;
+}
+
+h1 {
+  margin-left: 20px;
+  color: $color-4;
+  font-size: 3.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+    color: $color-4;
+  }
 }
