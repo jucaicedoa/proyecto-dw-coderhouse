@@ -1,18 +1,14 @@
 footer {
   width: auto;
   height: 20px;
+  @include flex-center;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   border-top:  1px solid;
   color: $color-3;
 }
 
 footer div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   height: 100%;
 }
 
