@@ -1,0 +1,50 @@
+.educacion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.educacion-item {
+  border: 1px solid $color-8;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  background-color: $color-6;
+  box-shadow: 0 2px 4px rgba(194, 191, 191, 0.93);
+}
+
+.educacion-item .titulo {
+  font-size: 1.1em;
+  color: $color-7;
+  position: relative;
+  overflow: hidden;
+  animation: mover-palabras 6s linear;
+  margin: 0;
+}
+
+.educacion-item .fecha {
+  font-weight: bold;
+  color: $color-9;
+  margin-bottom: 0.2em;
+}
+.fecha:hover {
+  transform: translate(0, -2px);
+  transition: transform 0.3s ease;
+}
+
+.educacion-item .nivel {
+  font-style: italic;
+  color: $color-10;
+}
+
+.institucion {
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  animation: escritura-palabras 5s steps(50) 1s 1 normal both,
+    parpadeo 500ms steps(50) infinite normal;
+}

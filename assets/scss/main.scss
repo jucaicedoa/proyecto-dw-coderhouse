@@ -1,0 +1,15 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/animations';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/load';
+
+@import 'base/global';
+@import 'base/index.';
+
+@import 'pages/abstract';
+@import 'pages/contact.scss';
+@import 'pages/education';
+@import 'pages/skills';
