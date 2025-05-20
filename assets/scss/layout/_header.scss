@@ -1,31 +1,30 @@
 #nav {
   border-style: groove;
   border: $color-5 1px solid;
-  border-radius: 8px;
+  @include border-radius(8px);
   width: 35%;
   margin: 0 auto;
   margin-top: 5px;
-}
 
-nav ul {
-  list-style-type: none;
-  text-align: center;
-  margin: 10px;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 10px;
+    padding: 0;
+  }
 
-nav li {
-  display: inline;
-  margin: 10px;
-}
+  li {
+    display: inline;
+    margin: 10px;
+  }
 
-nav a {
-  text-decoration: none;
-  color: #fff;
-}
-
-nav a:hover {
-  color: $color-4;
+  a {
+    text-decoration: none;
+    color: $color-6;
+    &:hover {
+      color: $color-4;
+    }
+  }
 }
 
 #menu-toggle {
@@ -42,29 +41,28 @@ nav a:hover {
     width: 95vw;
     text-align: left;
     padding-bottom: 5px;
-  }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-    margin: 0;
-  }
 
-  nav li {
-    display: block;
-    margin: 10px 0;
-  }
+    ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      margin: 0;
 
-  #menu-toggle {
-    display: block;
-  }
-
-  nav ul.active {
+      &.active {
     display: flex;
   }
-}
+    }
+    li {
+      display: block;
+      margin: 10px 0;
+    }
 
+    #menu-toggle {
+      display: block;
+    }
+  }
+}
 @media screen and (min-width: 769px) and (max-width: 1423px) {
   #nav {
     width: 65%;
