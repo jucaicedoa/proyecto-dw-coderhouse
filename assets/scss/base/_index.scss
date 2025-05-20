@@ -1,0 +1,110 @@
+.principal {
+  width: 95vw;
+  height: 85vh;
+  @include flex-center;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  border-style: groove;
+  border: $color-5 1px solid;
+  @include border-radius(5px);
+}
+
+.info-principal {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  animation: transiEntrada 2s ease-out forwards;
+
+  h2 {
+    margin-top: 0;
+    margin-left: 20px;
+    color: $color-6;
+    font-size: 2.5rem;
+  }
+
+  p {
+    margin-left: 20px;
+    color: $color-3;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    &:hover {
+      transform: translateY(5px);
+      color: $color-6;
+    }
+  }
+}
+
+.imagen-principal {
+  width: 50%;
+  @include flex-colum;
+  animation: entradaDerecha 2s ease-out forwards;
+  img {
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 10px $color-3;
+    }
+  }
+}
+
+.profile {
+  width: 40%;
+  height: 40%;
+  @include border-radius(4px);
+  box-shadow: 0 5px 5px rgba(79, 78, 78, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/*Media queries index*/
+@media (max-width: 768px) {
+  .principal {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .info-principal {
+    width: 100%;
+    height: auto;
+  }
+
+  .imagen-principal {
+    width: 40%;
+    height: auto;
+  }
+  .profile {
+    width: 70%;
+    height: auto;
+  }
+
+  main {
+    height: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1423px) {
+  .principal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .info-principal {
+    width: 50%;
+    height: auto;
+  }
+  .imagen-principal {
+    width: 40%;
+    height: auto;
+  }
+
+  .profile {
+    width: 70%;
+    height: auto;
+  }
+
+  main {
+    height: auto;
+  }
+}

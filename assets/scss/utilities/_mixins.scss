@@ -1,0 +1,16 @@
+@mixin flex-colum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}

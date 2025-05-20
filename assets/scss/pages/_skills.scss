@@ -1,0 +1,80 @@
+.contenedor-main-skills {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.container-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.section-skills {
+  border: 2px solid $color-5;
+  padding: 1rem;
+  box-shadow: 0 2px 4px $color-4;
+}
+
+.skill {
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-size: 1.4rem;
+  color: $color-6;
+  margin-bottom: 0.3rem;
+}
+
+.label:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.container-progress {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.barra-progreso {
+  height: 100%;
+  background-color: $color-3;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.barra-progreso:hover {
+  background-color: $color-4;
+  transition: background-color 0.3s ease;
+}
+
+.porcentaje {
+  margin-left: auto;
+  padding: 0 0.5rem;
+  background: transparent;
+  color: $color-6;
+}
+
+.skills-text span {
+  color: $color-6;
+  display: inline-block;
+  font-size: 3rem;
+  animation: movi 2s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+.skills-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+.skills-text span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skills-text span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.skills-text span:nth-child(4) {
+  animation-delay: 0.6s;
+}
