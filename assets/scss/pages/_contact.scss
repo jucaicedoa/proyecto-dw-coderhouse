@@ -15,7 +15,7 @@
   border: 1px solid $color-4;
   padding: 2rem;
   background-color: transparent;
-  border-radius: 5px;
+  @include border-radius(5px);
   box-shadow: 0 2px 4px rgba(253, 250, 250, 0.619);
 }
 
@@ -23,44 +23,45 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
 
-.contact-formulario label {
-  margin-bottom: 0.1rem;
-  font-size: 0.9em;
-  font-weight: bold;
-  color: $color-6;
-}
+  label {
+    margin-bottom: 0.1rem;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: $color-6;
+  }
 
-.contact-formulario input[type="text"],
-.contact-formulario input[type="email"],
-.contact-formulario textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid $color-3;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 0.8rem;
-  font-size: 1em;
-}
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid $color-3;
+    @include border-radius(4px);
+    box-sizing: border-box;
+    margin-bottom: 0.8rem;
+    font-size: 1em;
+    resize: vertical;
+  }
 
-.contact-formulario textarea {
-  resize: vertical;
-}
+  input[type="text"] {
+    @extend textarea;
+  }
 
-.contact-formulario button {
-  color: $color-6;
-}
+  input[type="email"] {
+    @extend textarea;
+  }
 
-.contact-formulario button:hover {
-  background-color: $color-4;
+  button {
+    color: $color-6;
+
+    &:hover {
+      background-color: $color-4;
+    }
+  }
 }
 
 /* Video */
 .video-placeholder-contenedor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 }
 
 .video-reproductor {
@@ -68,11 +69,8 @@
   aspect-ratio: 16 / 9;
   background-color: $color-1;
   border: 3px solid $color-4;
-  border-radius: 5px; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include border-radius(5px);
+  @include flex-colum;
   position: relative;
   overflow: hidden;
 }
@@ -82,10 +80,10 @@
   height: 70px;
   cursor: pointer;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
-}
 
-.icono-play:hover {
-  opacity: 0.8;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .control-barra {
@@ -104,7 +102,7 @@
   width: 100%;
   height: 8px;
   background-color: $color-5;
-  border-radius: 4px;
+  @include border-radius(4px);
   overflow: hidden;
 }
 
@@ -112,7 +110,7 @@
   width: 65%;
   height: 100%;
   background-color: $color-5;
-  border-radius: 4px;
+  @include border-radius(4px);
 }
 
 /* Media Query Contacto */
