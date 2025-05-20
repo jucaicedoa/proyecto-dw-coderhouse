@@ -8,3 +8,9 @@ $color-7: #000;
 $color-8: #ccc;
 $color-9: #666;
 $color-10: #555;
+
+$background-color: linear-gradient(
+    90deg,
+    rgba(11, 12, 16, 1) 0%,
+    rgba(31, 40, 51, 1) 60%
+  );
