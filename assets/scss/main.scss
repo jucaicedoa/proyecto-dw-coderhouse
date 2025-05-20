@@ -1,15 +1,16 @@
-@import 'utilities/variables';
-@import 'utilities/mixins';
-@import 'utilities/animations';
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./utilities/animations";
 
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/load';
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/load";
+@import "./layout/boton-accion";
 
-@import 'base/global';
-@import 'base/index.';
+@import "./base/global";
+@import "./base/index";
 
-@import 'pages/abstract';
-@import 'pages/contact.scss';
-@import 'pages/education';
-@import 'pages/skills';
+@import "./pages/abstract";
+@import "./pages/contact";
+@import "./pages/education";
+@import "./pages/skills";
