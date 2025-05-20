@@ -11,23 +11,22 @@
   margin-bottom: 25px;
   color: $color-7;
   line-height: 1.6;
-  border-radius: 10px;
-}
+  @include border-radius(10px);
 
-.principal-abstract h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: left;
-}
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 3px $color-3;
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
 
-.principal-abstract p {
-  font-size: 1.5rem;
-  text-align: justify;
-}
-
-.principal-abstract:hover {
-  transform: scale(1.05);
-  box-shadow: 0 3px 3px $color-3;
+  p {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
 }
 
 #container {
@@ -44,29 +43,32 @@
 #transicion {
   height: 50px;
   overflow: hidden;
-}
 
-#transicion > div > div {
-  color: $color-1;
-  padding: 4px 12px;
-  height: 45px;
-  margin-bottom: 45px;
-  display: inline-block;
-  border-radius: 5px;
-}
+  div {
+    div {
+      color: $color-1;
+      padding: 4px 12px;
+      height: 45px;
+      margin-bottom: 45px;
+      display: inline-block;
+      @include border-radius(5px);
+      background: $color-4;
+    }
 
-#transicion div:first-child {
-  animation: mostrar 5s linear infinite;
-}
+    &:first-child {
+      animation: mostrar 5s linear infinite;
 
-#transicion div div {
-  background: $color-4
-}
-#transicion div:first-child div {
-  background: $color-5;
-}
-#transicion div:last-child div {
-  background: $color-6;
+      div {
+        background: $color-5;
+      }
+    }
+
+    &:last-child {
+      div {
+        background: $color-6;
+      }
+    }
+  }
 }
 
 /* Media Query abstract */
@@ -77,22 +79,26 @@
   .principal-abstract {
     padding: 30px 15px;
     margin-bottom: 5px;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 
-  .principal-abstract h2 {
-    font-size: 1.5rem;
-  }
-
-  .principal-abstract p {
-    font-size: 1rem;
-  }
-
-  #transicion > div > div {
-    color: #0b0c10;
-    padding: 2px 6px;
-    height: 20px;
-    display: inline-block;
-    font-size: 10px;
+  #transicion {
+    > div {
+      > div {
+        color: $color-1;
+        padding: 2px 6px;
+        height: 20px;
+        display: inline-block;
+        font-size: 10px;
+      }
+    }
   }
 }
 
@@ -111,7 +117,7 @@
   }
 
   #transicion > div > div {
-    color: #0b0c10;
+    color: $color-1;
     padding: 2px 6px;
     height: 30px;
     display: inline-block;
