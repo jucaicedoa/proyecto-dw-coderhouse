@@ -76,8 +76,7 @@
 }
 
 .icono-play {
-  width: 70px;
-  height: 70px;
+  @include w-h(70px,70px);
   cursor: pointer;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
 
@@ -99,16 +98,14 @@
 }
 
 .contenedor-progreso {
-  width: 100%;
-  height: 8px;
+  @include w-h(100%, 8px);
   background-color: $color-5;
   @include border-radius(4px);
   overflow: hidden;
 }
 
 .progreso-f {
-  width: 65%;
-  height: 100%;
+  @include w-h(65%, 100%);
   background-color: $color-5;
   @include border-radius(4px);
 }

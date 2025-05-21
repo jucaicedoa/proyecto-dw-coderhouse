@@ -1,6 +1,5 @@
 .principal {
-  width: 95vw;
-  height: 85vh;
+  @include w-h(95vw, 85vh);
   @include flex-center;
   flex-wrap: wrap;
   margin: 10px auto;
@@ -10,8 +9,7 @@
 }
 
 .info-principal {
-  width: 50%;
-  height: 100%;
+  @include w-h(50%, 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,8 +48,7 @@
 }
 
 .profile {
-  width: 40%;
-  height: 40%;
+  @include w-h(40%, 40%);
   @include border-radius(4px);
   box-shadow: 0 5px 5px rgba(79, 78, 78, 0.3);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -65,17 +62,14 @@
   }
 
   .info-principal {
-    width: 100%;
-    height: auto;
+     @include w-h(100%, auto);
   }
 
   .imagen-principal {
-    width: 40%;
-    height: auto;
+    @include w-h(40%, auto);
   }
   .profile {
-    width: 70%;
-    height: auto;
+     @include w-h(70%, auto);
   }
 
   main {
@@ -91,17 +85,14 @@
   }
 
   .info-principal {
-    width: 50%;
-    height: auto;
+    @include w-h(50%, auto);
   }
   .imagen-principal {
-    width: 40%;
-    height: auto;
+    @include w-h(40%, auto);
   }
 
   .profile {
-    width: 70%;
-    height: auto;
+    @include w-h(70%, auto);
   }
 
   main {
