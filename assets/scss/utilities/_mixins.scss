@@ -14,3 +14,8 @@
 @mixin border-radius($radius) {
     border-radius: $radius;
 }
+
+@mixin w-h($width, $height) {
+    width: $width;
+    height: $height;
+}
