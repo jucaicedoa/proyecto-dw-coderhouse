@@ -5,11 +5,11 @@ footer {
   text-align: center;
   border-top: $color-4 1px solid;
   color: $color-3;
-}
 
-footer div {
-  @include flex-center;
-  height: 100%;
+  div {
+    @include flex-center;
+    height: 100%;
+  }
 }
 
 img.linkedin {
