@@ -113,7 +113,7 @@
 /* Media Query Contacto */
 @media (max-width: 768px) {
   .main-container {
-    grid-template-columns: 1fr;
+     display: block; 
   }
 
   .video-placeholder-contenedor {
