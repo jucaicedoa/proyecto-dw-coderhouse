@@ -4,7 +4,7 @@
     auto-fit,
     minmax(300px, 1fr)
   ); /* 2 columnas flexibles, mínimo 300px */
-  gap: 2rem;
+  gap: 2rem 2rem;
   width: 90%;
   max-width: 900px;
   align-items: start;
@@ -118,5 +118,6 @@
 
   .video-placeholder-contenedor {
     max-width: 100%;
+    padding-top: 10px;
   }
 }

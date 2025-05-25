@@ -148,7 +148,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
-    margin: 0;
+    margin-left: 15px;
   }
   #nav ul.active {
     display: flex;
@@ -175,7 +175,7 @@ footer {
   align-items: center;
   text-align: center;
   border-top: #66fcf1 1px solid;
-  color: #c5c6c7;
+  color: #fff;
 }
 footer div {
   display: flex;
@@ -462,14 +462,15 @@ h1:hover {
   background: #fff;
 }
 
-/* Media Query abstract */
 @media (max-width: 768px) {
   header {
     margin-bottom: 10px;
   }
   .principal-abstract {
-    padding: 30px 15px;
-    margin-bottom: 5px;
+    width: 95%;
+    height: auto;
+    padding: 20px 15px;
+    margin-bottom: 0px;
   }
   .principal-abstract h2 {
     font-size: 1.5rem;
@@ -480,9 +481,9 @@ h1:hover {
   #transicion > div > div {
     color: #0b0c10;
     padding: 2px 6px;
-    height: 20px;
+    height: 25px;
     display: inline-block;
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 @media (min-width: 769px) and (max-width: 1423px) {
@@ -501,13 +502,13 @@ h1:hover {
     padding: 2px 6px;
     height: 30px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 .main-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 columnas flexibles, mínimo 300px */
-  gap: 2rem;
+  gap: 2rem 2rem;
   width: 90%;
   max-width: 900px;
   align-items: start;
@@ -615,6 +616,7 @@ h1:hover {
   }
   .video-placeholder-contenedor {
     max-width: 100%;
+    padding-top: 10px;
   }
 }
 .educacion-container {
@@ -664,10 +666,17 @@ h1:hover {
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
-  transform: translateY(-50%);
+  transform: translateY(-48%);
   animation: escritura-palabras 5s steps(50) 1s 1 normal both, parpadeo 500ms steps(50) infinite normal;
 }
 
+@media (max-width: 768px) {
+  .educacion-container {
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+  }
+}
 .contenedor-main-skills {
   display: flex;
   flex-wrap: wrap;
@@ -745,6 +754,27 @@ h1:hover {
 }
 .skills-text span:nth-child(4) {
   animation-delay: 0.6s;
+}
+
+@media (max-width: 768px) {
+  .contenedor-main-skills {
+    flex-direction: column;
+    gap: 1rem;
+    width: 95%;
+  }
+  .container-skills {
+    grid-template-columns: 1fr;
+  }
+  .section-skills {
+    padding: 0.5rem;
+  }
+  .label {
+    font-size: 1.2rem;
+  }
+  .barra-progreso {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

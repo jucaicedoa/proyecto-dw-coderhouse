@@ -44,7 +44,16 @@
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
-  transform: translateY(-50%);
+  transform: translateY(-48%);
   animation: escritura-palabras 5s steps(50) 1s 1 normal both,
     parpadeo 500ms steps(50) infinite normal;
+}
+
+
+@media (max-width: 768px) {
+  .educacion-container {
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+  }
 }
