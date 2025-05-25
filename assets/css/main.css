@@ -236,6 +236,7 @@ img.linkedin {
   text-decoration: none;
   color: #fff;
   font-size: 15px;
+  padding: 10px 15px;
 }
 .btn:before {
   content: "";
