@@ -324,6 +324,18 @@ h1:hover {
   text-align: left;
   animation: transiEntrada 2s ease-out forwards;
 }
+.info-principal h1 {
+  margin-left: 20px;
+  color: #66fcf1;
+  font-size: 3.5rem;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.info-principal h1:hover {
+  transform: scale(1.05);
+  color: #66fcf1;
+}
 .info-principal h2 {
   margin-top: 0;
   margin-left: 20px;
