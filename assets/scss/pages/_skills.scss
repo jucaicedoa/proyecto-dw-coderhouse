@@ -81,3 +81,28 @@
   }
 }
 }
+
+
+@media (max-width: 768px) {
+ .contenedor-main-skills {
+    flex-direction: column;
+    gap: 1rem;
+    width: 95%;
+  }
+
+  .container-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .section-skills {
+    padding: 0.5rem;
+  }
+
+  .label {
+    font-size: 1.2rem;
+  }
+
+  .barra-progreso {
+    @include w-h(100%, 100%);
+  }
+}
