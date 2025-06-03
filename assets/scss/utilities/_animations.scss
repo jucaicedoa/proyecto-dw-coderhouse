@@ -111,3 +111,15 @@
     transform: translateY(-15px);
   }
 }
+
+@keyframes colorSkill {
+  0% { 
+    background-color: $color-3;
+  }
+  50% {
+    background-color: $color-5;
+  }
+  100% {
+    background-color:  $color-4;
+  }
+}

@@ -19,9 +19,7 @@
   box-shadow: 0 2px 4px $color-4;
 }
 
-.skill {
-  margin-bottom: 1rem;
-}
+
 
 .label {
   font-size: 1.4rem;
@@ -44,10 +42,12 @@
   @include w-h(80%, 100%);
   background-color: $color-3;
   border-radius: 5px;
-
+  transition: transform 0.3s ease;
+  animation: colorSkill 7s infinite alternate;
   &:hover {
-  background-color: $color-4;
-  transition: background-color 0.3s ease;  }
+    transform: scale(1.06);
+
+}
 }
 
 .porcentaje {
@@ -81,7 +81,6 @@
   }
 }
 }
-
 
 @media (max-width: 768px) {
  .contenedor-main-skills {
