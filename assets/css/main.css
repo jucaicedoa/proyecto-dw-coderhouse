@@ -101,6 +101,17 @@
     transform: translateY(-15px);
   }
 }
+@keyframes colorSkill {
+  0% {
+    background-color: #c5c6c7;
+  }
+  50% {
+    background-color: #45a29e;
+  }
+  100% {
+    background-color: #66fcf1;
+  }
+}
 #nav {
   border-style: groove;
   border: #45a29e 1px solid;
@@ -324,18 +335,6 @@ h1:hover {
   text-align: left;
   animation: transiEntrada 2s ease-out forwards;
 }
-.info-principal h1 {
-  margin-left: 20px;
-  color: #66fcf1;
-  font-size: 3.5rem;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-.info-principal h1:hover {
-  transform: scale(1.05);
-  color: #66fcf1;
-}
 .info-principal h2 {
   margin-top: 0;
   margin-left: 20px;
@@ -429,18 +428,16 @@ h1:hover {
   line-height: 1.6;
   border-radius: 10px;
 }
-.principal-abstract:hover {
-  transform: scale(1.05);
-  box-shadow: 0 3px 3px #c5c6c7;
-}
 .principal-abstract h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: left;
+  animation: transiEntrada 2s ease-out forwards;
 }
 .principal-abstract p {
   font-size: 1.5rem;
   text-align: justify;
+  animation: transiEntrada 2s ease-out forwards;
 }
 
 #container {
@@ -713,10 +710,6 @@ h1:hover {
   box-shadow: 0 2px 4px #66fcf1;
 }
 
-.skill {
-  margin-bottom: 1rem;
-}
-
 .label {
   font-size: 1.4rem;
   color: #fff;
@@ -738,10 +731,11 @@ h1:hover {
   height: 100%;
   background-color: #c5c6c7;
   border-radius: 5px;
+  transition: transform 0.3s ease;
+  animation: colorSkill 7s infinite alternate;
 }
 .barra-progreso:hover {
-  background-color: #66fcf1;
-  transition: background-color 0.3s ease;
+  transform: scale(1.06);
 }
 
 .porcentaje {
